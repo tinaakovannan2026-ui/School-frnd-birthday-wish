@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karuvaya's Birthday Universe 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars" aria-hidden="true"></div>
+    <div class="ambient-glow glow-one"></div>
+    <div class="ambient-glow glow-two"></div>
+
+    <div id="introOverlay" class="intro-overlay">
+        <div class="intro-content">
+            <p class="intro-eyebrow">A SPECIAL DAY. A SPECIAL PERSON.</p>
+            <div class="intro-orbit">
+                <span>✦</span>
+                <div class="intro-gift">🎁</div>
+                <span>✧</span>
+            </div>
+            <p class="intro-small">A little surprise made just for...</p>
+            <h1 class="intro-name">KARUVAYA</h1>
+            <p class="intro-subtitle">Your birthday movie starts now.</p>
+            <button id="startExperience" class="primary-button">
+                Start Your Surprise <span>✦</span>
+            </button>
+            <p class="intro-footnote">Turn your volume on if you want to play your own music 🎵</p>
+        </div>
+    </div>
+
+    <main class="site-shell">
+
+        <!-- CINEMATIC BIRTHDAY HERO -->
+        <section id="welcome" class="screen hero-screen active">
+            <div class="hero-topline">
+                <span>THE BIRTHDAY EDITION</span>
+                <span>✦ MADE WITH FRIENDSHIP ✦</span>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-kicker reveal">TODAY, THE MAIN CHARACTER IS...</p>
+                <h1 class="hero-title reveal">
+                    HAPPY<br>
+                    <span>BIRTHDAY</span>
+                </h1>
+
+                <div class="name-plaque reveal">
+                    <span class="plaque-line"></span>
+                    <span class="plaque-name">KARUVAYA</span>
+                    <span class="plaque-line"></span>
+                </div>
+
+                <div class="cake-scene reveal">
+                    <div class="cake-sparkle sparkle-a">✦</div>
+                    <div class="cake-sparkle sparkle-b">✧</div>
+                    <div class="cake">🎂</div>
+                    <div class="cake-shadow"></div>
+                </div>
+
+                <p class="hero-message reveal">
+                    Another year older, but still the same loosu. 😂
+                    <br>Un birthday-ku oru special surprise da!
+                </p>
+
+                <button class="primary-button reveal" onclick="startGame()">
+                    Enter Your Birthday Movie <span>➜</span>
+                </button>
+                <p class="tiny-note">WARNING: Contains teasing, memories & feelings ❤️</p>
+            </div>
+            <div class="hero-bottomline">A DAY WORTH CELEBRATING · A FRIEND WORTH KEEPING</div>
+        </section>
+
+        <!-- BIRTHDAY GAME -->
+        <section id="game" class="screen content-screen">
+            <div class="section-symbol">🎮</div>
+            <p class="eyebrow">ROUND ONE · BIRTHDAY BOY TEST</p>
+            <h2 id="question">Ready, Karuvaya?</h2>
+            <p id="questionCount" class="muted"></p>
+            <div id="answers" class="answers"></div>
+            <p id="gameMessage" class="game-message"></p>
+            <div class="score-line">Birthday legend points: <span id="score">0</span> ✦</div>
+        </section>
+
+        <!-- GAME COMPLETE -->
+        <section id="surprise" class="screen content-screen">
+            <div class="section-symbol celebration-icon">🏆</div>
+            <p class="eyebrow">THE MAIN CHARACTER HAS ARRIVED</p>
+            <h2>Mission Complete, Birthday Boy!</h2>
+            <p class="body-copy">
+                Dei Karuvaya, challenge pass pannitta! 😂
+                Un birthday-naala innikku unakku konjam extra attention.
+                Enjoy pannikko, legend!
+            </p>
+            <div class="birthday-stamp">BIRTHDAY LEGEND ✦ EST. YOUR BIRTHDAY</div>
+            <button class="primary-button" onclick="showMemories()">
+                Unlock Our Memories <span>📸</span>
+            </button>
+        </section>
+
+        <!-- FOUR PHOTO CARDS -->
+        <section id="memories" class="screen content-screen memories-screen">
+            <p class="eyebrow">CHAPTER TWO · OUR LITTLE UNIVERSE</p>
+            <h2>Four Photos.<br><span class="gradient-text">A Thousand Memories.</span></h2>
+            <p class="body-copy">Birthday boy, each card-ah click panni open pannu. ❤️</p>
+
+            <div id="memoryGrid" class="memory-grid"></div>
+
+            <p id="memoryProgress" class="muted">0 / 4 memories opened</p>
+            <button id="letterButton" class="primary-button hidden" onclick="showEnding()">
+                The Final Birthday Surprise <span>💌</span>
+            </button>
+        </section>
+
+        <!-- EMOTIONAL BIRTHDAY ENDING -->
+        <section id="ending" class="screen content-screen ending-screen">
+            <div class="ending-stars">✦　✧　✦</div>
+            <div class="section-symbol">🎂</div>
+            <p class="eyebrow">FINAL CHAPTER · FROM MY HEART</p>
+            <h2>Happy Birthday,<br><span class="gradient-text">My Karuvaya.</span></h2>
+
+            <div class="letter">
+                <div class="letter-top">A LITTLE BIRTHDAY LETTER 💌</div>
+
+                <p>Dei Karuvaya, ❤️</p>
+
+                <p>
+                    First of all, happy birthday da, loosu! 😂🎂
+                    Innum oru year older aayitta.
+                    Aana konjamavadhu mature aaguriya-nu paatha...
+                    adhu mattum innum suspense-ah dhaan irukku! 🤣
+                </p>
+
+                <p>
+                    Jokes aside, innikku un special day.
+                    Nee sirichitu, happy-ah, unakku pudichavanga kooda
+                    indha day-ah enjoy pannanum-nu manasaara wish panren.
+                </p>
+
+                <p>
+                    Namma serndhu irukkura indha four photos just pictures illa da.
+                    Oru naal thirumbi paakkumbodhu namma rendu peraiyum
+                    sirikka vaikkura chinna chinna memories.
+                    Andha moments-la oru part-ah irundhadhukku I'm happy. 🫂
+                </p>
+
+                <p>
+                    Life-la evlo changes vandhaalum, unakku nalla things nadakkanum.
+                    Un dreams ellam konjam konjama nijamaaganum.
+                    Kashtamaana days vandhaalum adha face panna strength irukkanum.
+                    Un smile-um happiness-um eppavum un kooda irukkanum.
+                </p>
+
+                <p>
+                    Naan unna kalaaikkuradhu stop panna maatten,
+                    so don't expect a peaceful life from me. 😂
+                    Aana unakku support venumna, un happiness celebrate
+                    pannanumna, un memories share pannanumna,
+                    indha friendship enakku special-ah irukkum.
+                </p>
+
+                <p>
+                    Innikki mattum illa, un future full-ah nalla moments,
+                    genuine happiness, success, peace ellam kidaikkanum da.
+                    You deserve beautiful things.
+                </p>
+
+                <h3>Stay happy. Keep smiling. Be yourself. ❤️</h3>
+                <p class="letter-signature">
+                    Happy Birthday, Karuvaya! 🎂<br>
+                    — Unna eppavum kalaaikkura friend 😂🫶
+                </p>
+            </div>
+
+            <button class="primary-button" onclick="celebrate()">
+                Make a Birthday Wish ✨
+            </button>
+            <p id="finalMessage" class="final-message"></p>
+            <button class="secondary-button" onclick="replayIntro()">
+                Watch the Surprise Again ↻
+            </button>
+        </section>
+
+    </main>
+
+    <div id="confettiContainer" aria-hidden="true"></div>
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
